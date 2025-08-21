@@ -1,0 +1,103 @@
+/* Opciones de palabras */
+.word-option {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    font-weight: 500;
+    user-select: none;
+}
+.word-option:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
+    background: #f0f9ff;
+}
+
+/* Barra de tiempo */
+.timer-container {
+    position: relative;
+    height: 8px;
+    background-color: #e2e8f0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.timer-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    transition: width 1s linear;
+}
+
+/* Animación feedback */
+.feedback-message {
+    animation: fadeIn 0.5s ease-out;
+    border: 1px solid #3b82f6;
+    border-radius: 12px;
+    padding: 12px;
+    margin-top: 15px;
+    background: #f0f9ff;
+    font-size: 0.95rem;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Fondo animado */
+body {
+    background-image: url('https://example.com/aula-de-clases.jpg'); /* Cambia la URL */
+    background-size: cover;
+    background-position: center;
+    animation: backgroundAnimation 12s infinite alternate;
+    font-family: "Poppins", sans-serif;
+    color: #1f2937;
+}
+@keyframes backgroundAnimation {
+    0% { background-position: center; }
+    100% { background-position: right; }
+}
+
+/* Contenedor principal */
+.container {
+    background-color: rgba(255, 255, 255, 0.92);
+    border-radius: 18px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Encabezado */
+.header {
+    background: linear-gradient(90deg, #217c25, #1a5e1c);
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Botones */
+.button {
+    background-color: #3b82f6;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 10px 18px;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+    border: none;
+}
+.button:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
+.button:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}
